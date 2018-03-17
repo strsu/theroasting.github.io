@@ -22,8 +22,6 @@
 	1.4.3.		2017-08-24	원두 워시드 -> 예가체프로 이름 변경, 계산버튼 제거
 	1.4.4.		2017-10-31	바리스타 추천 원두 변경 만델링 -> 볼리비아
 	1.4.5.		2017-11-03	input에 hint속성으로 병 무게를 보여주기 기능 추가(css에서 placeholder 색상을 바꿔야 했음)
-	1.4.6.		2018-01-12	input의 focus를 자동으로 이동하게 하였음.
-	1.4.7.		2018-03-09	사용법을 제거, 볼리비아 -> 르완다 변경
 * ----------------------------
  -->
 <html>
@@ -39,8 +37,7 @@
 	<!-- 원두 계산기 구현 함수 -->
 	<script>
 		
-		function showSum(number,obj,nextcol) {
-		
+		var showSum = function() {
 		var weight = new Array();
 			weight[0] = 1644;
 			weight[1] = 1548;
@@ -65,13 +62,6 @@
 			document.getElementsByTagName("output")[i+9].value=result[i+9];
 			}
 			
-			var frm=document.all;
-			if(obj.value.length==number)
-			{
-				next_c="frm."+nextcol+".focus();"
-				eval(next_c);
-			}
-		
 		}
 
 	</script>
@@ -97,7 +87,8 @@
 				<div id="main" class="wrapper style1">
 					<div class="container">
 						<header class="major">
-							<h2>원두 무게</h2>
+							<h2>사용법</h2>
+							<p>1. 저울에 원두가 담겨있는 유리병의 총 무게를 재서 빈칸에 입력하면 나온 원두량이 순수 원두 무게이다.</p>
 						</header>
 
 							<section>
@@ -118,47 +109,47 @@
 										-->
 											<tr>
 												<td>블렌딩</td>
-												<td><input type="tel" onkeyup="javascript:showSum(4, this, 'n_2')" maxlength="4" placeholder="병 무게 : 1644" autofocus /></td>
+												<td><input type="tel" onkeyup="javascript:showSum()" maxlength="4" placeholder="병 무게 : 1644" /></td>
 												<td><output> 원두량 </output></td>
 											</tr>
 											<tr>
 												<td>케냐</td>
-												<td><input type="tel" name="n_2" onkeyup="javascript:showSum(4, this, 'n_3')" maxlength="4" placeholder="병 무게 : 1548" /></td>
+												<td><input type="tel" onkeyup="javascript:showSum()" maxlength="4" placeholder="병 무게 : 1548" /></td>
 												<td><output> 원두량 </output></td>
 											</tr>
 											<tr>
 												<td>콜롬비아</td>
-												<td><input type="tel" name="n_3" onkeyup="javascript:showSum(4, this, 'n_4')" maxlength="4" placeholder="병 무게 : 1635" /></td>
+												<td> <input type="tel" onkeyup="javascript:showSum()" maxlength="4" placeholder="병 무게 : 1635" /></td>
 												<td><output> 원두량 </output></td>
 											</tr>
 											<tr>
 												<td>브라질</td>
-												<td><input type="tel" name="n_4" onkeyup="javascript:showSum(4, this, 'n_5')" maxlength="4" placeholder="병 무게 : 1587" /></td>
+												<td><input type="tel" onkeyup="javascript:showSum()" maxlength="4" placeholder="병 무게 : 1587" /></td>
 												<td><output> 원두량 </output></td>
 											</tr>
 											<tr>
 												<td>인디아</td>
-												<td><input type="tel" name="n_5" onkeyup="javascript:showSum(4, this, 'n_6')" maxlength="4" placeholder="병 무게 : 1640" /></td>
+												<td><input type="tel" onkeyup="javascript:showSum()" maxlength="4" placeholder="병 무게 : 1640" /></td>
 												<td><output> 원두량 </output></td>
 											</tr>
 											<tr>
 												<td>예가체프</td>
-												<td><input type="tel" name="n_6" onkeyup="javascript:showSum(4, this, 'n_7')" maxlength="4" placeholder="병 무게 : 1636" /></td>
+												<td><input type="tel" onkeyup="javascript:showSum()" maxlength="4" placeholder="병 무게 : 1636" /></td>
 												<td><output> 원두량 </output></td>
 											</tr>
 											<tr>
 												<td>과테말라</td>
-												<td><input type="tel" name="n_7" onkeyup="javascript:showSum(4, this, 'n_8')" maxlength="4" placeholder="병 무게 : 1301" /></td>
+												<td><input type="tel" onkeyup="javascript:showSum()" maxlength="4" placeholder="병 무게 : 1301" /></td>
 												<td><output> 원두량 </output></td>
 											</tr>
 											<tr>
 												<td>아리차</td>
-												<td><input type="tel" name="n_8" onkeyup="javascript:showSum(4, this, 'n_9')" maxlength="4" placeholder="병 무게 : 1303" /></td>
+												<td><input type="tel" onkeyup="javascript:showSum()" maxlength="4" placeholder="병 무게 : 1303" /></td>
 												<td><output> 원두량 </output></td>
 											</tr>
 											<tr>
-												<td>르완다</td>
-												<td><input type="tel" name="n_9" onkeyup="javascript:showSum(4, this, 'n_9')" maxlength="4" placeholder="병 무게 : 1301" /></td>
+												<td>볼리비아</td>
+												<td><input type="tel" onkeyup="javascript:showSum()" maxlength="4" placeholder="병 무게 : 1301" /></td>
 												<td><output> 원두량 </output></td>
 											</tr>
 										</tbody>
@@ -167,7 +158,8 @@
 								</div>
 								<br/>
 								<header class="major">
-							<h2>사용량</h2>
+							<h2>사용법</h2>
+							<p>2. 해당 요일 오픈 원두량을 기입하면 나오는 출력값은 오늘 사용량이다.</p>
 						</header>
 								<h4>사용량</h4>
 								<div class="table-wrapper">
@@ -182,47 +174,47 @@
 										<tbody>
 											<tr>
 												<td>블렌딩</td>
-												<td><input type="tel" onkeyup="javascript:showSum(4, this, 'n_10')" maxlength="4" /></td>
+												<td><input type="tel" onkeyup="javascript:showSum()" maxlength="4" /></td>
 												<td><output> 사용량 </output></td>
 											</tr>
 											<tr>
 												<td>케냐</td>
-												<td><input type="tel" name="n_10" onkeyup="javascript:showSum(4, this, 'n_11')" maxlength="4" /></td>
+												<td><input type="tel" onkeyup="javascript:showSum()" maxlength="4" /></td>
 												<td><output> 사용량 </output></td>
 											</tr>
 											<tr>
 												<td>콜롬비아</td>
-												<td> <input type="tel" name="n_11" onkeyup="javascript:showSum(4, this, 'n_12')" maxlength="4" /></td>
+												<td> <input type="tel" onkeyup="javascript:showSum()" maxlength="4" /></td>
 												<td><output> 사용량 </output></td>
 											</tr>
 											<tr>
 												<td>브라질</td>
-												<td><input type="tel" name="n_12" onkeyup="javascript:showSum(4, this, 'n_13')" maxlength="4" /></td>
+												<td><input type="tel" onkeyup="javascript:showSum()" maxlength="4" /></td>
 												<td><output> 사용량 </output></td>
 											</tr>
 											<tr>
 												<td>인디아</td>
-												<td><input type="tel" name="n_13" onkeyup="javascript:showSum(4, this, 'n_14')" maxlength="4" /></td>
+												<td><input type="tel" onkeyup="javascript:showSum()" maxlength="4" /></td>
 												<td><output> 사용량 </output></td>
 											</tr>
 											<tr>
 												<td>예가체프</td>
-												<td><input type="tel" name="n_14" onkeyup="javascript:showSum(4, this, 'n_15')" maxlength="4" /></td>
+												<td><input type="tel" onkeyup="javascript:showSum()" maxlength="4" /></td>
 												<td><output> 사용량 </output></td>
 											</tr>
 											<tr>
 												<td>과테말라</td>
-												<td><input type="tel" name="n_15" onkeyup="javascript:showSum(4, this, 'n_16')" maxlength="4" /></td>
+												<td><input type="tel" onkeyup="javascript:showSum()" maxlength="4" /></td>
 												<td><output> 사용량 </output></td>
 											</tr>
 											<tr>
 												<td>아리차</td>
-												<td><input type="tel" name="n_16" onkeyup="javascript:showSum(4, this, 'n_17')" maxlength="4" /></td>
+												<td><input type="tel" onkeyup="javascript:showSum()" maxlength="4" /></td>
 												<td><output> 사용량 </output></td>
 											</tr>
 											<tr>
-												<td>르완다</td>
-												<td><input type="tel" name="n_17" onkeyup="javascript:showSum(4, this, 'n_17')" maxlength="4" /></td>
+												<td>볼리비아</td>
+												<td><input type="tel" onkeyup="javascript:showSum()" maxlength="4" /></td>
 												<td><output> 사용량 </output></td>
 											</tr>
 										</tbody>

@@ -1,0 +1,274 @@
+<!DOCTYPE HTML>
+<!--
+	Landed by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+
+<html>
+	<head>
+		<title>커피 원두량, 사용량 계산기</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+	
+	<!-- 원두 계산기 구현 함수 -->
+	<script>
+		var showSum = function() {
+			var num1 =document.getElementsByTagName("input")[0].value;
+			var result1 = parseInt(num1) - 1572;
+			document.getElementsByTagName("output")[0].value=result1;
+
+			var num2 =document.getElementsByTagName("input")[1].value;
+			var result2 = parseInt(num2) - 1636;
+			document.getElementsByTagName("output")[1].value=result2;
+
+			var num3 =document.getElementsByTagName("input")[2].value;
+			var result3 = parseInt(num3) - 1580;
+			document.getElementsByTagName("output")[2].value=result3;
+
+			var num4 =document.getElementsByTagName("input")[3].value;
+			var result4 = parseInt(num4) - 1320;
+			document.getElementsByTagName("output")[3].value=result4;
+
+			var num5 =document.getElementsByTagName("input")[4].value;
+			var result5 = parseInt(num5) - 1630;
+			document.getElementsByTagName("output")[4].value=result5;
+
+			var num6 =document.getElementsByTagName("input")[5].value;
+			var result6 = parseInt(num6) - 1623;
+			document.getElementsByTagName("output")[5].value=result6;
+
+			var num7 =document.getElementsByTagName("input")[6].value;
+			var result7 = parseInt(num7) - 1560;
+			document.getElementsByTagName("output")[6].value=result7;
+
+			var num8 =document.getElementsByTagName("input")[7].value;
+			var result8 = parseInt(num8) - 1060;
+			document.getElementsByTagName("output")[7].value=result8;
+
+			var num9 =document.getElementsByTagName("input")[8].value;
+			var result9 = parseInt(num9) - 1548;
+			document.getElementsByTagName("output")[8].value=result9;
+
+			/*사용량 계산*/
+		
+			var num10 =document.getElementsByTagName("input")[9].value;
+			var result10 = parseInt(num10) - parseInt(result1);
+			document.getElementsByTagName("output")[9].value=result10;
+
+			var num11 =document.getElementsByTagName("input")[10].value;
+			var result11 = parseInt(num11) - parseInt(result2);
+			document.getElementsByTagName("output")[10].value=result11;
+
+			var num12 =document.getElementsByTagName("input")[11].value;
+			var result12 = parseInt(num12) - parseInt(result3);
+			document.getElementsByTagName("output")[11].value=result12;
+
+			var num13 =document.getElementsByTagName("input")[12].value;
+			var result13 = parseInt(num13) - parseInt(result4);
+			document.getElementsByTagName("output")[12].value=result13;
+
+			var num14 =document.getElementsByTagName("input")[13].value;
+			var result14 = parseInt(num14) - parseInt(result5);
+			document.getElementsByTagName("output")[13].value=result14;
+
+			var num15 =document.getElementsByTagName("input")[14].value;
+			var result15 = parseInt(num15) - parseInt(result6);
+			document.getElementsByTagName("output")[14].value=result15;
+
+			var num16 =document.getElementsByTagName("input")[15].value;
+			var result16 = parseInt(num16) - parseInt(result7);
+			document.getElementsByTagName("output")[15].value=result16;
+
+			var num17 =document.getElementsByTagName("input")[16].value;
+			var result17 = parseInt(num17) - parseInt(result8);
+			document.getElementsByTagName("output")[16].value=result17;
+
+			var num18 =document.getElementsByTagName("input")[17].value;
+			var result18 = parseInt(num18) - parseInt(result9);
+			document.getElementsByTagName("output")[17].value=result18;
+
+		}
+
+		</script>
+	
+	</head>
+	<body>
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<header id="header">
+					<h1 id="logo"><a href="index.html">The Loasting - 고대점</a></h1>
+					 <nav id="nav">
+						<ul>
+							<li><a href="index.html">정릉점</a></li>
+							<li><a href="korea.html">고대점</a></li>
+							<li><a href="recipe.html">레시피</a></li>
+							<!--<li><a href="#" class="button special">Sign Up</a></li>-->
+						</ul>
+					</nav>
+				</header>
+
+			<!-- Main -->
+				<div id="main" class="wrapper style1">
+					<div class="container">
+						<header class="major">
+							<h2>사용법</h2>
+							<p>1. 저울에 원두가 담겨있는 유리병의 총 무게를 재서 빈칸에 입력후 '원두량 계산' 버튼을 누른다. <br/> -> 출력된 원두량이 순수 원두 무게이다.</p>
+						</header>
+
+							<section>
+								
+								<h4>원두량</h4>
+								<div class="table-wrapper">
+									<table class="alt">
+										<thead>
+											<tr>
+												<th>원두종</th>
+												<th>원두 + 병</th>
+												<th>원두량</th>
+											</tr>
+										</thead>
+										<tbody>
+										<!--
+											onkeyup을 추가함으로서 계산 자동화
+										-->
+											<tr>
+												<td>블랜딩</td>
+												<td><input type="tel" onkeyup="javascript:showSum()" maxlength="4" /></td>
+												<td><output> 원두량 </output></td>
+											</tr>
+											<tr>
+												<td>케냐</td>
+												<td><input type="tel" onkeyup="javascript:showSum()" maxlength="4" /></td>
+												<td><output> 원두량 </output></td>
+											</tr>
+											<tr>
+												<td>콜롬비아</td>
+												<td> <input type="tel" onkeyup="javascript:showSum()" maxlength="4" /></td>
+												<td><output> 원두량 </output></td>
+											</tr>
+											<tr>
+												<td>인디아</td>
+												<td><input type="tel" onkeyup="javascript:showSum()" maxlength="4" /></td>
+												<td><output> 원두량 </output></td>
+											</tr>
+											<tr>
+												<td>브라질</td>
+												<td><input type="tel" onkeyup="javascript:showSum()" maxlength="4" /></td>
+												<td><output> 원두량 </output></td>
+											</tr>
+											<tr>
+												<td>워시드</td>
+												<td><input type="tel" onkeyup="javascript:showSum()" maxlength="4" /></td>
+												<td><output> 원두량 </output></td>
+											</tr>
+											<tr>
+												<td>과테말라</td>
+												<td><input type="tel" onkeyup="javascript:showSum()" maxlength="4" /></td>
+												<td><output> 원두량 </output></td>
+											</tr>
+											<tr>
+												<td>아리차</td>
+												<td><input type="tel" onkeyup="javascript:showSum()" maxlength="4" /></td>
+												<td><output> 원두량 </output></td>
+											</tr>
+											<tr>
+												<td>인도네시아</td>
+												<td><input type="tel" onkeyup="javascript:showSum()" maxlength="4" /></td>
+												<td><output> 원두량 </output></td>
+											</tr>
+										</tbody>
+									</table>
+									<button onclick="showSum()" class="button special small"> 원두량 계산 </button>
+									<br/>
+								</div>
+								<br/>
+								<header class="major">
+							<h2>사용법</h2>
+							<p>2. 해당 요일 오픈 원두량을 넣은후 '사용량 계산' 버튼을 누른다. <br/> -> 출력된 값은 오늘 사용량이다.</p>
+						</header>
+								<h4>사용량</h4>
+								<div class="table-wrapper">
+									<table class="alt">
+										<thead>
+											<tr>
+												<th>원두종</th>
+												<th>오픈 원두량</th>
+												<th>사용량</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>블랜딩</td>
+												<td><input type="tel" onkeyup="javascript:showSum()" maxlength="4" /></td>
+												<td><output> 사용량 </output></td>
+											</tr>
+											<tr>
+												<td>케냐</td>
+												<td><input type="tel" onkeyup="javascript:showSum()" maxlength="4" /></td>
+												<td><output> 사용량 </output></td>
+											</tr>
+											<tr>
+												<td>콜롬비아</td>
+												<td> <input type="tel" onkeyup="javascript:showSum()" maxlength="4" /></td>
+												<td><output> 사용량 </output></td>
+											</tr>
+											<tr>
+												<td>인디아</td>
+												<td><input type="tel" onkeyup="javascript:showSum()" maxlength="4" /></td>
+												<td><output> 사용량 </output></td>
+											</tr>
+											<tr>
+												<td>브라질</td>
+												<td><input type="tel" onkeyup="javascript:showSum()" maxlength="4" /></td>
+												<td><output> 사용량 </output></td>
+											</tr>
+											<tr>
+												<td>워시드</td>
+												<td><input type="tel" onkeyup="javascript:showSum()" maxlength="4" /></td>
+												<td><output> 사용량 </output></td>
+											</tr>
+											<tr>
+												<td>과테말라</td>
+												<td><input type="tel" onkeyup="javascript:showSum()" maxlength="4" /></td>
+												<td><output> 사용량 </output></td>
+											</tr>
+											<tr>
+												<td>아리차</td>
+												<td><input type="tel" onkeyup="javascript:showSum()" maxlength="4" /></td>
+												<td><output> 사용량 </output></td>
+											</tr>
+											<tr>
+												<td>인도네시아</td>
+												<td><input type="tel" onkeyup="javascript:showSum()" maxlength="4" /></td>
+												<td><output> 사용량 </output></td>
+											</tr>
+										</tbody>
+									</table>
+									<button onclick="showSum()" class="button special small"> 사용량 계산 </button>
+									<br/><br/>
+								</div>
+							</section>
+
+					</div>
+				</div>
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
